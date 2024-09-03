@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Assm1_Framework.Migrations
 {
     [DbContext(typeof(CompanyDbContext))]
-    [Migration("20240823163747_updateDepartmentMigraition")]
-    partial class updateDepartmentMigraition
+    [Migration("20240903163014_Test")]
+    partial class Test
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,18 +33,6 @@ namespace Assm1_Framework.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Code")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -56,36 +44,34 @@ namespace Assm1_Framework.Migrations
 
             modelBuilder.Entity("Assm1_Framework.Entities.Employee", b =>
                 {
-                    b.Property<int>("EmpId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("Cairo");
 
                     b.Property<int?>("Age")
-                        .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
-                        .IsRequired()
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(50)
-                        .HasColumnType("varchar");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar")
+                        .HasDefaultValue("Ahmed");
 
                     b.Property<decimal>("Salary")
                         .HasColumnType("money");
 
-                    b.HasKey("EmpId");
+                    b.HasKey("Id");
 
-                    b.ToTable("Employee", "dbo");
+                    b.ToTable("Employees");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,7 +16,7 @@ namespace Assm1_Framework.Contexts
             modelBuilder.Entity<Employee>(E =>
             {
 
-                    E.Property(E => E.EmpId)
+                    E.Property(E => E.Id)
                     .UseIdentityColumn(1, 1);
 
                     E.Property(E => E.Name)

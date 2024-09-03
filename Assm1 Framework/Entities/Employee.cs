@@ -62,7 +62,7 @@ namespace Assm1_Framework.Entities
     public class Employee
     {
        
-        public int EmpId { get; set; }
+        public int Id { get; set; }
 
         public string? Name { get; set; }
 
@@ -72,10 +72,10 @@ namespace Assm1_Framework.Entities
 
         public string Address { get; set; }
 
-        public string Phone { get; set; }
+        //public string Phone { get; set; }
 
-        public string Email { get; set; }
+        //public string Email { get; set; }
 
-        public double TotalSalary { get; set; }
+        //public double TotalSalary { get; set; }
     }
 }
