@@ -49,6 +49,20 @@ namespace Assm1_Framework
 
             //context.SaveChanges();
 
+            //var Result =  context.Employees.Where(E => E.Id == 2).FirstOrDefault();
+            //var Result =  context.Employees.FirstOrDefault(E => E.Id == 2);
+
+            //var Result = context.Employees.Select(E => E.Name);
+
+            //foreach (var item in Result)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+
+
+            //    Console.WriteLine(Result?.Name);
+            //Console.WriteLine(Result?.Id);
 
         }
     }
