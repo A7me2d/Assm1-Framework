@@ -14,13 +14,15 @@ namespace Assm1_Framework
 
             using CompanyDbContext context = new CompanyDbContext();
 
-            var employee = new Employee()
-            {
-                Name = "Ahmed mm",
-                Salary = 12000,
-                Address = "Cairo",
-                Age = 25
-            };
+            //var employee = new Employee()
+            //{
+            //    Name = "Ahmed mm",
+            //    Salary = 12000,
+            //    Address = "Cairo",
+            //    Age = 25
+            //};
+
+            #region Create - Insert
 
             //employee.Name = "Khaled";
 
@@ -41,8 +43,10 @@ namespace Assm1_Framework
 
             //context.Employees.Add(employee);
             //context.SaveChanges();
+            #endregion
 
 
+            #region Read - Select
             //Console.WriteLine(context.Entry(employee).State);
             //context.Entry(employee).State = EntityState.Added;
             //Console.WriteLine(context.Entry(employee).State);
@@ -63,6 +67,27 @@ namespace Assm1_Framework
 
             //    Console.WriteLine(Result?.Name);
             //Console.WriteLine(Result?.Id);
+            #endregion
+
+            #region Update
+
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 2);
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //Result.Name = "Omer Mohamed";
+            ////Console.WriteLine(context.Entry(Result).State);
+
+            ////context.Update(Result);
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //context.SaveChanges();
+            //Console.WriteLine(context.Entry(Result).State);
+
+
+            #endregion
+
+
+
 
         }
     }
