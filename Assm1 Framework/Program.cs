@@ -87,7 +87,19 @@ namespace Assm1_Framework
             #endregion
 
 
+            #region DELETE
+            //var Result = context.Employees.FirstOrDefault(E => E.Id == 3);
 
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //context.Employees.Remove(Result);
+
+            //Console.WriteLine(context.Entry(Result).State);
+
+            //context.SaveChanges();
+
+            //Console.WriteLine(context.Entry(Result).State); 
+            #endregion
 
         }
     }
